@@ -1,28 +1,28 @@
 import { useState } from "react";
 import { cn } from "../lib/utils";
 
-const skills = [
-  // Frontend
-  { name: "HTML/CSS", level: 95, category: "frontend" },
-  { name: "JavaScript", level: 90, category: "frontend" },
-  { name: "React", level: 90, category: "frontend" },
-  // { name: "TypeScript", level: 85, category: "frontend" },
-  { name: "Tailwind CSS", level: 90, category: "frontend" },
-  { name: "Bootstrap CSS", level: 90, category: "frontend" },
-  // { name: "Next.js", level: 80, category: "frontend" },
-
-  // Backend
-  { name: "Strapi", level: 80, category: "backend" },
-  { name: "Firebase", level: 60, category: "backend" },
-
-  // Tools
-  { name: "Git/GitHub", level: 90, category: "tools" },
-  { name: "VS Code", level: 95, category: "tools" },
-];
-
-const categories = ["all", "frontend", "backend", "tools"];
-
 export const SkillsSection = () => {
+  const skills = [
+    // Frontend
+    { name: "HTML/CSS", level: 95, category: "frontend" },
+    { name: "JavaScript", level: 90, category: "frontend" },
+    { name: "React", level: 90, category: "frontend" },
+    // { name: "TypeScript", level: 85, category: "frontend" },
+    { name: "Tailwind CSS", level: 90, category: "frontend" },
+    { name: "Bootstrap CSS", level: 90, category: "frontend" },
+    // { name: "Next.js", level: 80, category: "frontend" },
+
+    // Backend
+    { name: "Strapi", level: 80, category: "backend" },
+    { name: "Firebase", level: 60, category: "backend" },
+
+    // Tools
+    { name: "Git/GitHub", level: 90, category: "tools" },
+    { name: "VS Code", level: 95, category: "tools" },
+  ];
+
+  const categories = ["all", "frontend", "backend", "tools"];
+
   const [activeCategory, setActiveCategory] = useState("all");
 
   const filteredSkills = skills.filter(
@@ -41,7 +41,7 @@ export const SkillsSection = () => {
               key={key}
               onClick={() => setActiveCategory(category)}
               className={cn(
-                "px-5 py-2 rounded-full transition-colors duration-300 capitalize",
+                "px-5 py-2 rounded-full transition-colors duration-300 cursor-pointer capitalize",
                 activeCategory === category
                   ? "bg-primary text-primary-foreground"
                   : "bg-secondary/70 text-forefround hover:bd-secondary"
