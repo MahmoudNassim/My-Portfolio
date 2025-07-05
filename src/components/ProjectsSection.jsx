@@ -27,7 +27,7 @@ export const ProjectsSection = () => {
       title: "My Portfolio",
       description:
         "Personal portfolio website built with React and Tailwind CSS, featuring light/dark mode toggle and a responsive, accessible design to showcase projects and skills.",
-      image: "../../public/projects/portfolio.JPG",
+      image: "/projects/portfolio.JPG",
       tags: ["React", "TailwindCSS", "Dark Mode"],
       demoUrl: "#",
       githubUrl: "#",
@@ -37,7 +37,7 @@ export const ProjectsSection = () => {
       title: "Nooni",
       description:
         "An E-commerce Furniture Website built with HTML , CSS, and Bootstrap, featuring a responsive design and a user-friendly interface.",
-      image: "../../public/projects/nooni.JPG",
+      image: "/projects/nooni.JPG",
       tags: ["HTML", "CSS", "Bootstrap"],
       demoUrl: "https://nooni-one.vercel.app/",
       githubUrl: "https://github.com/MahmoudNassim/nooni",
