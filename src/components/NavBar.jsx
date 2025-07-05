@@ -1,5 +1,5 @@
 import { cn } from "../lib/utils";
-import { Menu, X } from "lucide-react";
+import { Menu, Sun, Moon, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const navItems = [
@@ -13,15 +13,36 @@ const navItems = [
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.screenY > 10);
     };
-
     window.addEventListener("scroll", handleScroll);
+
+    const storedTheme = localStorage.getItem("theme");
+    if (storedTheme === "dark") {
+      setIsDarkMode(true);
+      document.documentElement.classList.add("dark");
+    } else {
+      localStorage.setItem("theme", "light");
+      setIsDarkMode(false);
+    }
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const toggleTheme = () => {
+    if (isDarkMode) {
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+      setIsDarkMode(false);
+    } else {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+      setIsDarkMode(true);
+    }
+  };
   return (
     <nav
       className={cn(
@@ -65,7 +86,7 @@ export const Navbar = () => {
 
         <div
           className={cn(
-            "fixed inset-0 bg-background/95 backdroup-blur-md z-40 flex flex-col items-center justify-center",
+            "fixed inset-0 bg-background/95 backdrop-blur-md z-40 flex flex-col items-center justify-center",
             "transition-all duration-300 md:hidden",
             isMenuOpen
               ? "opacity-100 pointer-events-auto"
@@ -73,6 +94,17 @@ export const Navbar = () => {
           )}
         >
           <div className="flex flex-col space-y-8 text-xl">
+            <button
+              onClick={toggleTheme}
+              className="md:hidden p-2 rounded-full transition-colors duration-300 self-center"
+            >
+              {isDarkMode ? (
+                <Sun className="h-6 w-6 text-yellow-300" />
+              ) : (
+                <Moon className="h-6 w-6 text-blue-900" />
+              )}
+            </button>
+
             {navItems.map((item, key) => (
               <a
                 key={key}
