@@ -16,20 +16,29 @@ import { useState } from "react";
 export const ContactSection = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
-
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    setIsSubmitting(true);
+    const form = e.target;
+    const name = form.name.value;
+    const email = form.email.value;
+    const message = form.message.value;
+
+    const mailtoLink = `mailto:mahmodnassim7@gmail.com?subject=Message from ${encodeURIComponent(
+      name
+    )}&body=${encodeURIComponent(`\n${message}`)}`;
+
+    window.location.href = mailtoLink;
 
     setTimeout(() => {
       toast({
-        title: "Message sent!",
-        description: "Thank you for your message. I'll get back to you soon.",
+        title: "Redirected to Email",
+        description:
+          "Your email client should now be open with the message pre-filled.",
       });
-      setIsSubmitting(false);
-    }, 1500);
+    }, 500);
   };
+
   return (
     <section id="contact" className="py-24 px-4 relative bg-secondary/30">
       <div className="container mx-auto max-w-5xl">
