@@ -7,10 +7,10 @@ export const SkillsSection = () => {
     { name: "HTML/CSS", level: 95, category: "frontend" },
     { name: "JavaScript", level: 90, category: "frontend" },
     { name: "React", level: 90, category: "frontend" },
-    // { name: "TypeScript", level: 85, category: "frontend" },
+    { name: "TypeScript", level: 85, category: "frontend" },
     { name: "Tailwind CSS", level: 90, category: "frontend" },
     { name: "Bootstrap CSS", level: 90, category: "frontend" },
-    // { name: "Next.js", level: 80, category: "frontend" },
+    { name: "Next.js", level: 80, category: "frontend" },
 
     // Backend
     { name: "Strapi", level: 80, category: "backend" },
