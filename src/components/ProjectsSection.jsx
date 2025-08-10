@@ -16,11 +16,21 @@ export const ProjectsSection = () => {
       id: 2,
       title: "Foodota",
       description:
-        "A restaurant product listing and ordering platform with dynamic cart functionality, built using React, Tailwind, and Strapi CMS.",
+        "Foodota is a modern web platform that allows users to browse restaurants, explore product listings, and place orders seamlessly. It features a responsive UI built with Tailwind CSS, global state management using Zustand, and a fully integrated backend powered by Strapi CMS. The platform includes a shopping cart system and restaurant and product filters.",
       image: "/projects/foodota2.JPG",
       tags: ["React", "TailwindCSS", "Strapi", "Zustand"],
       demoUrl: "#",
       githubUrl: "https://github.com/MahmoudNassim/Foodota-New-",
+    },
+    {
+      id: 3,
+      title: "Rabweb",
+      description:
+        "A responsive marketplace website concept for buying and selling websites and online businesses, focusing on clean UI design and smooth animations. Built with React and TailwindCSS as a frontend prototype without backend functionality.",
+      image: "/projects/rabweb.JPG",
+      tags: ["React", "TailwindCSS", "AOS Animations"],
+      demoUrl: "https://rabweb.vercel.app/",
+      githubUrl: "https://github.com/MahmoudNassim/rabweb",
     },
     {
       id: 3,
