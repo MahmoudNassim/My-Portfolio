@@ -40,7 +40,7 @@ export const ProjectsSection = () => {
       image: "/projects/portfolio.JPG",
       tags: ["React", "TailwindCSS", "Dark Mode"],
       demoUrl: "#",
-      githubUrl: "#",
+      githubUrl: "https://github.com/MahmoudNassim/My-Portfolio",
     },
     {
       id: 3,
