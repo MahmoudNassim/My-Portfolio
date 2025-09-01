@@ -9,7 +9,8 @@ export const ProjectsSection = () => {
         "A complete POS system built with React and Tailwind, featuring product selection, cart handling, invoice generation, and date-based filtering.",
       image: "/projects/POS.JPG",
       tags: ["React", "TailwindCSS", "Strapi"],
-      demoUrl: "#",
+      demoUrl:
+        "https://drive.google.com/file/d/1SXjGOrs0FTWKBOEWfH8bQUfgjPcAS29G/view",
       githubUrl: "https://github.com/MahmoudNassim/POS-Resturant-",
     },
     {
@@ -19,7 +20,8 @@ export const ProjectsSection = () => {
         "Foodota is a modern web platform that allows users to browse restaurants, explore product listings, and place orders seamlessly. It features a responsive UI built with Tailwind CSS, global state management using Zustand, and a fully integrated backend powered by Strapi CMS. The platform includes a shopping cart system and restaurant and product filters.",
       image: "/projects/foodota2.JPG",
       tags: ["React", "TailwindCSS", "Strapi", "Zustand"],
-      demoUrl: "#",
+      demoUrl:
+        "https://drive.google.com/file/d/1roJoHvGIF36uHo_-GD4UVfakKwEPSfUj/view",
       githubUrl: "https://github.com/MahmoudNassim/Foodota-New-",
     },
     {
@@ -44,6 +46,16 @@ export const ProjectsSection = () => {
     },
     {
       id: 3,
+      title: "Hilink",
+      description:
+        "A responsive single-page travel website built with Next.js and Tailwind CSS. Optimized for performance and SEO with a clean, modern UI and fast loading experience.",
+      image: "/projects/hilink.JPG",
+      tags: ["Next.js", "TailwindCSS", "TypeScript"],
+      demoUrl: "https://travel-next-js-indol.vercel.app/",
+      githubUrl: "https://github.com/MahmoudNassim/Travel-Next.js-",
+    },
+    {
+      id: 4,
       title: "Nooni",
       description:
         "An E-commerce Furniture Website built with HTML , CSS, and Bootstrap, featuring a responsive design and a user-friendly interface.",
@@ -76,7 +88,7 @@ export const ProjectsSection = () => {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-full object-cover lg:object-contain object-center transition-transform duration-500 group-hover:scale-110"
                 />
               </div>
 
